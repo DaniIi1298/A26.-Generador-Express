@@ -37,6 +37,12 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
+//router que se encargará de la API  de bicicletas
+var bicicletasAPIRouter = require('./routes/api/bicicletas');
+ 
+//If there are several versions of the API, /api/v1/bicicletas is usually used
+app.use('/api/bicicletas', bicicletasAPIRouter);
+
 // ============================
 // ===== MANEJADORES DE ERRORES
 
