@@ -13,7 +13,10 @@ var swaggerUi = require("swagger-ui-express");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+const cors = require('cors');
+
 var app = express();
+app.use(cors());
 
 const options = {
   definition: {
